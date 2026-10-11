@@ -15,7 +15,6 @@
         <main class="layout"><aside aria-label="Campus locations"><h2>Explore campus</h2><p>Select a place below or click a map marker to learn what you can do there. Use the layer selector at the upper-right of the map to switch between aerial and street-style views.</p><div id="locations"></div><div class="notice"><strong>Review draft:</strong> Building coordinates are approximate and must be checked against the official NEIU campus map before submission. Replace the labeled placeholder photos with real building photographs.</div><p class="footer-note"><a href="https://www.neiu.edu/about/campus-map-and-directions" target="_blank" rel="noopener noreferrer">Official NEIU campus map and directions</a></p></aside><div id="map" role="region" aria-label="Interactive map of six Northeastern Illinois University campus locations"></div></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 <script>
-
 const places = [
  {name:'Ronald Williams Library',type:'Study & research',lat:41.98036,lng:-87.71918,description:'Study, find books and research materials, and get help with academic work.',photo:'1.Ronald_Williams_library.jpg'},
  {name:'Student Union and Cafeteria',type:'Food & student life',lat:41.98102,lng:-87.71855,description:'Find food, meet classmates, and learn about student activities.',photo:'2.Student_union_and_cafeteria.jpg'},
@@ -24,6 +23,14 @@ const places = [
  {name:'Physical Education Complex',type:'Sports & fitness',lat:41.97835,lng:-87.71735,description:'Explore athletic and physical education facilities.',photo:'5.Physical_Education_Complex.jpg'},
  {name:'Steinberg Fine Arts Center',type:'Arts & performances',lat:41.98045,lng:-87.72005,description:'Visit spaces for arts, music, and performances.',photo:'6.art_and_music_building.jpg'}
 ];
+const images={
+    "Ronald Williams Library": "1.Ronald_Williams_library.jpg",
+    "Student Union and Cafeteria": "2.Student_union_and_cafeteria.jpg",
+    "Bernard J. Brommel Hall": "3.Bernard_J_Brommel_Hall.jpg",
+    "Lech Walesa Hall": "4.Lech_Walesa_Hall.jpg",
+    "Physical Education Complex": "5.Physical_Education_Complex.jpg",
+    "Steinberg Fine Arts Center": "6.art_and_music_building.jpg"
+     };    
 const map=L.map('map',{scrollWheelZoom:true}).setView([41.9802,-87.7188],16);
 const imagery=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles &copy; Esri and its imagery providers',maxZoom:19});
 const lightGray=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles &copy; Esri, HERE, Garmin, and contributors',maxNativeZoom:16,maxZoom:19});
