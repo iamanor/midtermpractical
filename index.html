@@ -11,19 +11,18 @@
 </style>
     </head>
     <body>
-        <header><h1>Northeastern Illinois University — Main Campus Map</h1><p>A quick guide to important places for new students • Chicago, Illinois</p></header>
+        <header><h1>Northeastern Illinois University | Main Campus Map</h1><p>A quick guide to important places for new students • Chicago, Illinois</p></header>
         <main class="layout"><aside aria-label="Campus locations"><h2>Explore campus</h2><p>Select a place below or click a map marker to learn what you can do there. Use the layer selector at the upper-right of the map to switch between aerial and street-style views.</p><div id="locations"></div><div class="notice"><strong>Review draft:</strong> Building coordinates are approximate and must be checked against the official NEIU campus map before submission. Replace the labeled placeholder photos with real building photographs.</div><p class="footer-note"><a href="https://www.neiu.edu/about/campus-map-and-directions" target="_blank" rel="noopener noreferrer">Official NEIU campus map and directions</a></p></aside><div id="map" role="region" aria-label="Interactive map of six Northeastern Illinois University campus locations"></div></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 <script>
-// REVIEW: Coordinates other than the library are approximate draft placements.
-// Replace each image with a properly licensed photo of that exact NEIU building.
+
 const places = [
- {name:'Ronald Williams Library',type:'Study & research',lat:41.98036,lng:-87.71918,description:'Study, find books and research materials, and get help with academic work.',photo:'library.jpg'},
- {name:'Student Union and Cafeteria',type:'Food & student life',lat:41.98102,lng:-87.71855,description:'Find food, meet classmates, and learn about student activities.',photo:'student-union.jpg'},
- {name:'Bernard J. Brommel Hall',type:'Classes & academic offices',lat:41.97975,lng:-87.71820,description:'Attend classes and visit academic offices on campus.',photo:'brommel-hall.jpg'},
- {name:'Lech Walesa Hall',type:'Student services',lat:41.98200,lng:-87.71920,description:'Find important student services and administrative offices.',photo:'lech-walesa-hall.jpg'},
- {name:'Physical Education Complex',type:'Sports & fitness',lat:41.97835,lng:-87.71735,description:'Explore athletic and physical education facilities.',photo:'physical-education.jpg'},
- {name:'Steinberg Fine Arts Center',type:'Arts & performances',lat:41.98045,lng:-87.72005,description:'Visit spaces for arts, music, and performances.',photo:'fine-arts.jpg'}
+ {name:'Ronald Williams Library',type:'Study & research',lat:41.98036,lng:-87.71918,description:'Study, find books and research materials, and get help with academic work.',photo:'1.Ronald_Williams_library.jpg'},
+ {name:'Student Union and Cafeteria',type:'Food & student life',lat:41.98102,lng:-87.71855,description:'Find food, meet classmates, and learn about student activities.',photo:'2.Student_union_and_cafeteria.jpg'},
+ {name:'Bernard J. Brommel Hall',type:'Classes & academic offices',lat:41.97975,lng:-87.71820,description:'Attend classes and visit academic offices on campus.',photo:'3.Bernard_J_Brommel_Hall.jpg'},
+ {name:'Lech Walesa Hall',type:'Student services',lat:41.98200,lng:-87.71920,description:'Find important administrative offices and student services.',photo:'4.Lech_Walesa_Hall.jpg'},
+ {name:'Physical Education Complex',type:'Sports & fitness',lat:41.97835,lng:-87.71735,description:'Explore athletic and physical education facilities.',photo:'5.Physical_Education_Complex.jpg'},
+ {name:'Steinberg Fine Arts Center',type:'Arts & performances',lat:41.98045,lng:-87.72005,description:'Visit spaces for arts, music, and performances.',photo:'6.art_and_music_building.jpg'}
 ];
 const map=L.map('map',{scrollWheelZoom:true}).setView([41.9802,-87.7188],16);
 const imagery=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles &copy; Esri and its imagery providers',maxZoom:19});
