@@ -44,6 +44,7 @@ places.forEach((p,i)=>{
     "Physical Education Complex": "5.Physical_Education_Complex.jpg",
     "Steinberg Fine Arts Center": "6.art_and_music_building.jpg"
      };
+    const img=document.createElement('img');img.className='popup-photo';img.src='images/'+p.photo;img.alt='Photograph of '+p.name;img.onerror=function(){this.onerror=null;this.src='https://placehold.co/480x260/e4ebf4/263b5a?text=Add+Building+Photo';this.alt='Placeholder image; photograph of '+p.name+' is not yet provided';};
  const title=document.createElement('div');title.className='popup-title';title.textContent=p.name;
  const description=document.createElement('p');description.className='popup-description';description.textContent=p.description;
  const credit=document.createElement('p');credit.className='photo-credit';credit.textContent='Photo: add a verified building image before submission.';
