@@ -36,7 +36,14 @@ const bounds=[];
 places.forEach((p,i)=>{
  const icon=L.divIcon({className:'',html:`<div class="marker-pin"><span>${i+1}</span></div>`,iconSize:[34,38],iconAnchor:[15,34],popupAnchor:[0,-28]});
  const popup=document.createElement('div');
- const img=document.createElement('img');img.className='popup-photo';img.src='images/'+p.photo;img.alt='Photograph of '+p.name;img.onerror=function(){this.onerror=null;this.src='https://placehold.co/480x260/e4ebf4/263b5a?text=Add+Building+Photo';this.alt='Placeholder image; photograph of '+p.name+' is not yet provided';};
+ const images={
+    "Ronald Williams Library": "1.Ronald_Williams_library.jpg",
+    "Student Union and Cafeteria": "2.Student_union_and_cafeteria.jpg",
+    "Bernard J. Brommel Hall": "3.Bernard_J_Brommel_Hall.jpg",
+    "Lech Walesa Hall": "4.Lech_Walesa_Hall.jpg",
+    "Physical Education Complex": "5.Physical_Education_Complex.jpg",
+    "Steinberg Fine Arts Center": "6.art_and_music_building.jpg"
+     };
  const title=document.createElement('div');title.className='popup-title';title.textContent=p.name;
  const description=document.createElement('p');description.className='popup-description';description.textContent=p.description;
  const credit=document.createElement('p');credit.className='photo-credit';credit.textContent='Photo: add a verified building image before submission.';
